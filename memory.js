@@ -128,11 +128,10 @@ document.addEventListener('DOMContentLoaded', function() {
         // Listener para o botão de próxima página
         nextPageBtn.addEventListener('click', function() {
             // Redireciona para a próxima página do seu roteiro
-            window.location.href = 'textinho.html'; // Altere para o nome do seu arquivo
+            window.location.href = 'message.html'; // Altere para o nome do seu arquivo
         });
     }
 
-    // Opcional: Se você quiser animar o título da página de memória com typeWriter
     const memoryGameTitle = document.getElementById('memory-game-title');
     if (memoryGameTitle && memoryGameTitle.dataset.originalText) {
         typeWriter(memoryGameTitle, memoryGameTitle.dataset.originalText, 70);
