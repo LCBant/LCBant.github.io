@@ -11,8 +11,51 @@
     <link href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="container mt-5 d-flex flex-column align-items-center">
-    <h1 class="text-center m-5">Quiz</h1>
+<div class="container d-flex flex-column align-items-center mt-5">
+    <div id="quiz-container" class="w-100 d-flex flex-column align-items-center">
+
+        <div id="question-1" class="quiz-question active">
+            <h2 class="text-center mb-4 question-text" data-original-text="Qual o meu sabor sorvete favorito?"></h2>
+            <div class="options d-flex flex-column align-items-center w-100">
+                <button class="option-btn btn custom-btn mb-2" data-answer="a">a) Resposta 1</button>
+                <button class="option-btn btn custom-btn mb-2" data-answer="b">b) Resposta 2</button>
+                <button class="option-btn btn custom-btn mb-2" data-answer="c">c) Resposta 3</button>
+                <button class="option-btn btn custom-btn" data-answer="d">d) Resposta 4</button>
+            </div>
+            <p class="feedback-text text-center mt-3"></p>
+            <button class="next-btn btn custom-btn mt-4 d-none">Próxima Pergunta</button>
+        </div>
+
+        <div id="question-2" class="quiz-question d-none">
+            <h2 class="text-center mb-4 question-text" data-original-text="Há quanto tempo nos conhecemos?"></h2>
+            <div class="options d-flex flex-column align-items-center w-100">
+                <button class="option-btn btn custom-btn mb-2" data-answer="a">a) Resposta 1</button>
+                <button class="option-btn btn custom-btn mb-2" data-answer="b">b) Resposta 2</button>
+                <button class="option-btn btn custom-btn mb-2" data-answer="c">c) Resposta 3</button>
+                <button class="option-btn btn custom-btn" data-answer="d">d) Resposta 4</button>
+            </div>
+            <p class="feedback-text text-center mt-3"></p>
+            <button class="next-btn btn custom-btn mt-4 d-none">Próxima Pergunta</button>
+        </div>
+
+        <div id="question-3" class="quiz-question d-none">
+            <h2 class="text-center mb-4 question-text" data-original-text="A data correta do meu aniversário:"></h2>
+            <div class="options d-flex flex-column align-items-center w-100">
+                <button class="option-btn btn custom-btn mb-2" data-answer="a">a) Resposta 1</button>
+                <button class="option-btn btn custom-btn mb-2" data-answer="b">b) Resposta 2</button>
+                <button class="option-btn btn custom-btn mb-2" data-answer="c">c) Resposta 3</button>
+                <button class="option-btn btn custom-btn" data-answer="d">d) Resposta 4</button>
+            </div>
+            <p class="feedback-text text-center mt-3"></p>
+            <button class="next-btn btn custom-btn mt-4 d-none">Resultado do Quiz</button>
+        </div>
+
+        <div id="quiz-result" class="quiz-question d-none">
+            <h2 class="text-center mb-4 question-text" data-original-text=""></h2>
+            <button id="finish-quiz-btn" class="btn custom-btn mt-4">Jogar o próximo jogo</button>
+        </div>
+
+    </div>
 </div>
 <script src="main.js"></script>
 <script src="quiz.js"></script>

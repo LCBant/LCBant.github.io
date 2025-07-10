@@ -1,0 +1,101 @@
+body {
+    background-image: url("assets/bg2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Seu código de animação fadeIn (se já não estiver lá) */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos para o botão (do seu código anterior) */
+.custom-btn {
+    border: none;
+    border-bottom: 2px solid #333; /* Cor da sua linha inferior */
+    padding-bottom: 5px;
+    border-radius: 0;
+    width: fit-content; /* Para que o botão não ocupe 100% da largura se não quiser */
+    transition: all 0.2s ease-out; /* Para o efeito de clique suave */
+}
+
+.custom-btn:active {
+    /* Sem cor de fundo, mas pode ter um feedback sutil na borda ou texto */
+    border-bottom-color: #555 !important; /* Exemplo: borda um pouco mais escura */
+    transform: translateY(1px);
+    box-shadow: none !important;
+}
+
+/* Estilos específicos para o quiz */
+.quiz-question {
+    width: 100%;
+    max-width: 500px; /* Limita a largura do quiz em telas maiores para melhor leitura */
+    animation: fadeIn 1s ease-out forwards; /* Aplica a animação ao surgir */
+    padding: 15px; /* Adiciona um pouco de padding interno */
+    background-color: #f8f9fa; /* Cor de fundo suave para o card da pergunta */
+    border-radius: 10px; /* Bordas arredondadas para o card */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra suave */
+    display: flex; /* Para centralizar os itens dentro da pergunta */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.quiz-question.d-none {
+    opacity: 0;
+    /* transition: opacity 0.3s ease-out; Removido pois a animação fadeIn já lida com isso */
+    pointer-events: none; /* Impede cliques em elementos ocultos */
+    position: absolute; /* Para que não ocupem espaço quando ocultos e permita a transição */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza mesmo com position absolute */
+}
+
+/* Garante que a pergunta ativa esteja visível e no fluxo */
+.quiz-question.active {
+    position: relative; /* Volta ao fluxo normal para animação */
+    transform: none; /* Reseta o transform do d-none */
+}
+
+
+.quiz-question .options {
+    flex-wrap: wrap; /* Permite que os botões quebrem linha em telas menores */
+    justify-content: center; /* Centraliza os botões */
+    margin-top: 15px;
+}
+
+.quiz-question .option-btn {
+    flex-grow: 1; /* Faz os botões tentarem ocupar espaço igual */
+    max-width: 90%; /* Ajuste a largura máxima para mobile */
+    /* Para desktop, você pode usar uma media query para 48% */
+    /* @media (min-width: 768px) {
+        .quiz-question .option-btn {
+            max-width: 48%;
+        }
+    } */
+    margin: 5px; /* Margem entre os botões */
+    text-align: left; /* Alinha o texto das opções à esquerda */
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Estilos para feedback de acerto/erro */
+.feedback-text.correct {
+    color: #28a745; /* Verde do Bootstrap */
+    font-weight: bold;
+    animation: fadeIn 0.5s ease-out forwards; /* Anima o feedback */
+}
+
+.feedback-text.wrong {
+    color: #dc3545; /* Vermelho do Bootstrap */
+    font-weight: bold;
+    animation: fadeIn 0.5s ease-out forwards; /* Anima o feedback */
+}
