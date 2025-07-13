@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             id: 'question-2',
             correctAnswer: 'a', // Verifique a letra correta no seu HTML
-            feedbackCorrect: "Não achei que vc fosse acertar kkkkkkk.",
+            feedbackCorrect: "Isso aí! Nos conhecemos em setembro de 2023. Espero q tu n tenha chutado a resposta kkkk",
             feedbackWrong: "Tudo bem errar essa. Nos conhecemos em setembro de 2023."
         },
         {
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             id: 'question-5',
             correctAnswer: 'c',
-            feedbackCorrect: "Não pensei q vc fosse lembrar kkkkkk",
+            feedbackCorrect: "Por um momento achei q tu iria se confundir e errar. Usava o nick de Holandês e depois de alguns dias troquei meu nick para Bant.",
             feedbackWrong: "Tudo bem errar essa. Meu nick era Holandês. Pouco tempo depois de nos conhecermos, troquei meu nick para Bant."
         }
         // Adicione mais perguntas aqui se desejar, seguindo o mesmo formato

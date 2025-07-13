@@ -28,7 +28,7 @@ if (document.getElementById('message-1')) {
 }
 
 if (document.getElementById('message-3')) {
-    const text = "Na verdade, o que me motivou a fazer esse site pra ti, é porque quero te pedir desculpas pelo que aconteceu aquele dia. Acabei me irritando e fui bem tóxico contigo ao falar com você daquela maneira. Eu não tinha entendido na hora o que fiz, por isso fiquei discutindo desnecessariamente com você, o que me fez ficar mais irritado ainda. Eu não estava me divertindo no jogo e estava de péssimo humor, mas não queria me recusar a jogar contigo, por isso aceitei o seu convite. Eu deveria ter sido mais honesto contigo naquela hora, você me entenderia facilmente e isso tudo poderia ter sido evitado. Sei que isso já foi resolvido, mas achei necessário um pedido de desculpa decente."
+    const text = "Na verdade, o que me motivou a fazer esse site pra ti, é porque quero te pedir desculpas pelo que aconteceu aquele dia. Acabei me irritando e fui bem tóxico contigo ao falar com você daquela maneira. Eu não tinha percebido na hora o que fiz, por isso fiquei discutindo desnecessariamente, o que me deixou mais chateado. Eu não estava me divertindo no jogo e estava de péssimo humor, mas não queria recusar o seu convite. Eu deveria ter sido mais honesto contigo naquela hora, você me entenderia facilmente e isso tudo poderia ter sido evitado. Sei que já conversamos e que isso está resolvido, mas achei necessário fazer um pedido de desculpas decente."
     typeWriter('message-3', text, 25, function () {
         const sadCat = document.getElementById('gatito-triste');
         if (sadCat) {
