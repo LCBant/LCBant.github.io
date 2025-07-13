@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
     let lockBoard = false; // Impede cliques durante a verificação de pares
     let matchedPairs = 0; // Conta quantos pares foram encontrados
 
-    // Função para embaralhar um array (algoritmo de Fisher-Yates)
     function shuffle(array) {
         let currentIndex = array.length, randomIndex;
         while (currentIndex !== 0) {

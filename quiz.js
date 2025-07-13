@@ -30,20 +30,32 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             id: 'question-1',
             correctAnswer: 'a', // Verifique a letra correta no seu HTML
-            feedbackCorrect: "Acertou! Ainda bem, achei que ia ter que te dar um manual de instruções sobre mim.",
-            feedbackWrong: "Errou feio, errou rude! Mas a culpa é minha, eu sou confuso mesmo."
+            feedbackCorrect: "Acertou! Sou graduado em Desenvolvimento de Software e essa foi minha profissão até dezembro do ano passado.",
+            feedbackWrong: "Errou feio, sempre deixei minha profissão na bio do meu insta! Mas tudo bem, é normal esquecer ou se confundir."
         },
         {
             id: 'question-2',
             correctAnswer: 'a', // Verifique a letra correta no seu HTML
-            feedbackCorrect: "Meu Deus, você me conhece melhor do que eu mesma! Preocupante.",
-            feedbackWrong: "Ah, essa era pegadinha! (Ou não, vai saber)."
+            feedbackCorrect: "Não achei que vc fosse acertar kkkkkkk.",
+            feedbackWrong: "Tudo bem errar essa. Nos conhecemos em setembro de 2023."
         },
         {
             id: 'question-3',
             correctAnswer: 'c', // Verifique a letra correta no seu HTML
-            feedbackCorrect: "Exato! Me deu até um déjà vu aqui. Você é demais!",
-            feedbackWrong: "Poxa, essa era fácil! Mas não tem problema, o que importa é a intenção (de me perdoar)."
+            feedbackCorrect: "Óiaaa, vc lembrou! 😁",
+            feedbackWrong: "É no dia 11, bom saber pq aí tu sabe quando me dar presente 😝."
+        },
+        {
+            id: 'question-4',
+            correctAnswer: 'b', // Verifique a letra correta no seu HTML
+            feedbackCorrect: "Gosto muito de FF, mas o Mine sempre estará no meu coração. Cresci jogando esse jogo.",
+            feedbackWrong: "Apesar de ter jogado muito FF, ainda sim prefiro o Mine."
+        },
+        {
+            id: 'question-5',
+            correctAnswer: 'c',
+            feedbackCorrect: "Não pensei q vc fosse lembrar kkkkkk",
+            feedbackWrong: "Tudo bem errar essa. Meu nick era Holandês. Pouco tempo depois de nos conhecermos, troquei meu nick para Bant."
         }
         // Adicione mais perguntas aqui se desejar, seguindo o mesmo formato
     ];
@@ -128,11 +140,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 // Lógica para textos finais baseados na pontuação
                 if (score === quizData.length) { // Acertou todas
-                    finalMessage = `UAU! ${score}/${quizData.length} acertos! Você realmente me conhece como a palma da sua mão (ou melhor, do meu coração)! ❤️`;
+                    finalMessage = `UAU! ${score}/${quizData.length} acertos! Você realmente me conhece como a palma da sua mão! ❤️`;
                 } else if (score >= quizData.length / 2) { // Acertou a maioria
                     finalMessage = `Muito bom! ${score}/${quizData.length} acertos! Você sabe bastante sobre mim, nossa conexão é forte! 😉`;
                 } else { // Menos da metade
-                    finalMessage = `Hmm... ${score}/${quizData.length} acertos. Parece que ainda temos muito o que conversar (e rir!). Mas obrigada por jogar! 😊`;
+                    finalMessage = `Hmm... ${score}/${quizData.length} acertos. Parece que ainda temos muito o que conversar. Mas obrigado por jogar! 😊`;
                 }
 
                 // Atualiza o texto do título da tela de resultado
@@ -142,8 +154,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         }
-
-        // --- Adiciona Event Listeners (mantêm-se os mesmos) ---
         allQuizQuestions.forEach(q => {
             q.querySelectorAll('.option-btn').forEach(btn => {
                 btn.addEventListener('click', handleOptionClick);
